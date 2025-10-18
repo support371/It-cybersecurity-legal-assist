@@ -1,0 +1,63 @@
+Instructions for Replit AI Agent (or Similar Builder)
+
+Project Name
+
+Global Business Directory Platform
+
+⸻
+
+Tech Stack Recommendation
+	•	Frontend: React (Next.js or plain React) for SEO + performance
+	•	Backend: Node.js with Express
+	•	Database: PostgreSQL (for structured business data)
+	•	Search: ElasticSearch (fast directory lookups)
+	•	Hosting: Replit (for dev), later move to Vercel/Render/AWS for scale
+
+⸻
+
+Pages & Routes (matching wireframe)
+	1.	/ – Home Page
+	•	Search bar (entity name/number/jurisdiction input)
+	•	Statistics section (Businesses Indexed, Active Jurisdictions, Latest Filings)
+	•	CTA buttons (“Verify a Business”, “Subscribe for Compliance Alerts”)
+	•	“How It Works” section
+	2.	/search – Search Directory Page
+	•	Filter by: Entity Type, Jurisdiction, Status, Industry, Date of Filing
+	•	Paginated results
+	3.	/business/[id] – Business Profile Page
+	•	Business Name + Entity Number
+	•	Jurisdiction & Status
+	•	Filing history (from Filings.csv)
+	•	Agent details (from Agents.csv)
+	•	Principals (from Principals.csv)
+	•	Compliance standing + download PDF
+	4.	/tools – Compliance Tools
+	•	Business Verification tool (input + generate compliance report)
+	•	Risk Score Dashboard (basic placeholder for now)
+	5.	/analytics – Analytics Page
+	•	Charts for: New Businesses per month, Industry breakdown, Jurisdiction trends
+	6.	/services – Products & Services Page
+	•	API Access info
+	•	Subscriptions pricing plans
+	•	Enterprise integrations
+	7.	/about – About Page
+	•	Mission, Privacy Policy, Terms, Contact
+	8.	/dashboard – User Account Area (after login)
+	•	Saved businesses & alerts
+	•	Subscription management
+	•	API keys
+
+⸻
+
+Core Features to Implement First
+	1.	Upload CSV data into PostgreSQL (Agents, Filings, Principals).
+	2.	Build search endpoint for businesses (/api/search).
+	3.	Generate dynamic business profiles.
+	4.	Add basic authentication (for dashboard & subscriptions).
+	5.	Style with TailwindCSS (fast, clean design).
+
+⸻
+
+Prompt to Give Replit AI Agent
+
+Build a full-stack web app called Global Business Directory Platform. Use React (frontend), Node.js/Express (backend), and PostgreSQL. Import sample business data from CSV files (Filings, Agents, Principals). Create the following routes/pages: Home (/), Search Directory (/search), Business Profile (/business/[id]), Compliance Tools (/tools), Analytics (/analytics), Services (/services), About (/about), and Dashboard (/dashboard). Include a global navigation menu and footer. Style with TailwindCSS. Home page should match this wireframe: [provide wireframe screenshot].

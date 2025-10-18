@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9fafb;
+  padding-top: 0;
+}
+
+/* Federal Government Styling */
+.federal-header {
+  background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%);
+  color: white;
+  font-weight: 600;
+}
+
+.federal-notice {
+  background-color: #dbeafe;
+  border-left: 4px solid #2563eb;
+  color: #1e40af;
+}
+
+.federal-seal {
+  background: radial-gradient(circle, #1e3a8a 0%, #1e40af 100%);
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+/* Ensure content doesn't overlap with trust badge */
+.main-content {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Trust badge non-intrusive positioning */
+nav {
+  position: relative;
+  z-index: 20;
+}
+
+main {
+  position: relative;
+  z-index: 10;
+}
+
+/* Federal color scheme overrides */
+.bg-federal-blue { background-color: #1e3a8a; }
+.bg-federal-light-blue { background-color: #3b82f6; }
+.text-federal-blue { color: #1e3a8a; }
+.border-federal-blue { border-color: #2563eb; }
+
+/* Basic utility styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.min-h-screen { min-height: 100vh; }
+.bg-gray-50 { background-color: #f9fafb; }
+.bg-white { background-color: #ffffff; }
+.bg-blue-600 { background-color: #2563eb; }
+.bg-gray-900 { background-color: #111827; }
+.text-white { color: #ffffff; }
+.text-gray-600 { color: #4b5563; }
+.text-gray-800 { color: #1f2937; }
+.shadow-lg { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+.rounded-lg { border-radius: 0.5rem; }
+.p-8 { padding: 2rem; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.py-16 { padding-top: 4rem; padding-bottom: 4rem; }
+.mb-16 { margin-bottom: 4rem; }
+.text-center { text-align: center; }
+.font-bold { font-weight: 700; }
+.text-5xl { font-size: 3rem; }
+.text-3xl { font-size: 1.875rem; }
+.text-xl { font-size: 1.25rem; }
+.flex { display: flex; }
+.grid { display: grid; }
+.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.gap-8 { gap: 2rem; }
+
+/* Additional utility styles */
+.search-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  max-width: 64rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+  color: #4b5563;
+}
+
+/* Animation for loading spinner */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
